@@ -19,11 +19,11 @@ import com.ctre.phoenix.sensors.PigeonIMU.PigeonState;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.Timer;
-import edu.wpi.first.wpilibj.controller.SimpleMotorFeedforward;
+import edu.wpi.first.math.controller.SimpleMotorFeedforward;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
-import edu.wpi.first.wpilibj.geometry.Pose2d;
-import edu.wpi.first.wpilibj.geometry.Rotation2d;
-import edu.wpi.first.wpilibj.kinematics.DifferentialDriveOdometry;
+import edu.wpi.first.math.geometry.Pose2d;
+import edu.wpi.first.math.geometry.Rotation2d;
+import edu.wpi.first.math.kinematics.DifferentialDriveOdometry;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.config.CTREUnits;
 import frc.robot.config.Config;
@@ -74,7 +74,6 @@ public class DriveBase extends SubsystemBase {
         timer.start();
 
         differentialDrive = new DifferentialDrive(leftMaster, rightMaster);
-        differentialDrive.setRightSideInverted(Config.DRIVETRAIN_INVERT_DIFFERENTIALDRIVE);
 
         var table = NetworkTableInstance.getDefault().getTable("DrivetrainOdometry");
         xOdometry = table.getEntry("xOdometry");
@@ -142,7 +141,7 @@ public class DriveBase extends SubsystemBase {
      * @return Heading of the robot in degrees
      */
     private double getCurrentAngle() {
-        return ahrs.getYaw();
+        return ahrs.getAngle();
     }
     
     /**

@@ -4,7 +4,7 @@
 
 package frc.robot.commands.ramsete;
 
-import edu.wpi.first.wpilibj.trajectory.Trajectory;
+import edu.wpi.first.math.trajectory.Trajectory;
 import edu.wpi.first.wpilibj2.command.RamseteCommand;
 import frc.robot.config.Config;
 import frc.robot.subsystems.DriveBase;

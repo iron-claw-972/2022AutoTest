@@ -62,7 +62,7 @@ public class RobotContainer {
         // Example trajectory - Drive forward 1 meter
         Trajectory trajectory1 = TrajectoryGenerator.generateTrajectory(List.of(
             new Pose2d(),
-            new Pose2d(1, 0, Rotation2d.fromDegrees(90))),
+            new Pose2d(2, 0, Rotation2d.fromDegrees(90))),
             getConfig(0, 0, false));
         RamseteCommandMerge ramsete1 = new RamseteCommandMerge(trajectory1, "ExampleTrajectory-DriveForward");
         
@@ -104,7 +104,7 @@ public class RobotContainer {
         return new InstantCommand(() -> DriveBase.getInstance().resetPose(initalPose));
     }
 
-    /**
+    /*
      * Create a command that will reset the odometry to the given pose
      * 
      * @param pose Pose to reset odometry to

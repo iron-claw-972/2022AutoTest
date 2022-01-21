@@ -1,0 +1,11 @@
+{
+  "SysId": {
+    "Analysis Type": "Drivetrain",
+    "AnalyzerJSONLocation": "C:\\Users\\agnin\\Desktop\\cum\\2022CCROBOT\\sysid_data20220119-162957.json",
+    "NetworkTables Settings": {
+      "serverTeam": "972"
+    },
+    "mode": "Client",
+    "serverTeam": "972"
+  }
+}

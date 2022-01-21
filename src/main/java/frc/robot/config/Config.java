@@ -61,12 +61,12 @@ public final class Config {
     // ksVolts -> adds +ksVolts or -ksVolts to overcome static friction in the direction of motion.
     // kvVoltSecondsPerMeter -> Adds the values number of volts for every meter per second of velocity desired.
     // kaVoltSecondsSquaredPerMeter -> Adds the values number of volts for every meter per second squared of acceleration desired.
-    public static double ksVolts = 0.51764;
-    public static double kvVoltSecondsPerMeter = 0.85433;
-    public static double kaVoltSecondsSquaredPerMeter = 0.048697;
+    public static double ksVolts = 0.59317;
+    public static double kvVoltSecondsPerMeter = 2.1786;
+    public static double kaVoltSecondsSquaredPerMeter = 0.56146;
 
     // P Gain -> Number of ticks/100ms to apply for every ticks/100ms of error
-    public static double kRamsetePGain = 0.85763;
+    public static double kRamsetePGain = 3.2385;
 
     /** 
      * Generating Trajectories Data
